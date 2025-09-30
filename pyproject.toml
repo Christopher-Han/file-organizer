@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-file-organizer"
+version = "0.1.0"
+description = "MCP-powered agent that organizes files with safe staging and memory."
+readme = "README.md"
+authors = [{ name = "Agentic Team" }]
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.12",
+    "pydantic>=2.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+]
+
+[project.scripts]
+organizer = "organizer.cli.main:app"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-ra"
