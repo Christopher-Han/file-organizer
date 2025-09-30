@@ -18,5 +18,6 @@ Additional documentation for each milestone will be recorded in the `docs/` dire
 progresses. Current deep dives:
 
 - [`docs/milestone-setup.md`](docs/milestone-setup.md) – environment scaffolding and path helpers.
+- [`docs/milestone-mcp-server-foundations.md`](docs/milestone-mcp-server-foundations.md) – server routing scaffold, shared context, and storage adapters.
 - [`docs/milestone-rule-engine.md`](docs/milestone-rule-engine.md) – rule DSL, suggestion engine, and
   safety tooling for staging, applying, and rolling back manifests.
