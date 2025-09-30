@@ -85,21 +85,12 @@ and exposes both a CLI and menu-driven UI for search and organization flows.
 - Agent leverages the indexed search to return results rapidly.
 
 ## Milestones and Tasks
-### Day 1: Setup & Infrastructure
-- Confirm project dependencies and create the base package structure (MCP client/server packages
-  plus CLI entry point).
-- Implement a configuration loader for storage paths, ensuring directories are created on first run.
-- Establish documentation for configuration and project scaffolding.
-
-### Day 2: Rule Engine and Safety Tooling
-- Implement the Rule DSL and `suggest_organization` tool.
-- Add staging and diff tooling via `stage_changes` and `preview_diff`.
-- Deliver apply and rollback tooling (`apply_manifest`, `rollback_manifest`).
-
-### Day 3: Memory, Prompts, and Polish
-- Implement memory persistence tools (`get_memory`, `update_memory`, `learn_from_confirmations`).
-- Integrate agent prompts and yes/no confirmation loops.
-- Polish TUI flows and write safety-focused tests (rollback, collisions, scaling).
+### Milestone Progress
+- [x] **Setup & Infrastructure** – Base package structure established, configuration loader shipped, and documentation published for environment and scaffolding workflows.
+- [x] **MCP Server Foundations** – Server scaffold with router/context completed alongside JSON memory and SQLite index adapters.
+- [ ] **Filesystem Scanning & Indexing** – Build `scan_paths`, `index_paths`, and `search_files` tools on top of the new storage layer.
+- [ ] **Rule Engine and Safety Tooling** – Implement the Rule DSL and add staging/diff/apply/rollback integrations to the server.
+- [ ] **Memory, Prompts, and Polish** – Wire memory tools, agent prompts, TUI flows, and extensive safety testing.
 
 ## Testing Checklist
 - Cross-device move integrity with hash verification.
