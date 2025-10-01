@@ -14,6 +14,7 @@ def test_load_organizer_paths_creates_directories(tmp_path: Path) -> None:
     assert paths.index_file == paths.root / "organizer.index.sqlite"
     assert paths.staging_dir == paths.root / "staging"
     assert paths.log_dir == paths.root / "logs"
+    assert paths.llama_api_key_file == paths.root / "llama.api.key"
 
     # Directories should be created on load.
     assert paths.root.is_dir()

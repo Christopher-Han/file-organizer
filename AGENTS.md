@@ -7,3 +7,4 @@
 - Uphold the safety guarantees described in the project plan: stage changes before applying them, provide diff previews, require explicit yes/no confirmations, and ensure rollback manifests are available for recovery.
 - Maintain durable state using the established storage layout (`organizer.memory.json`, `organizer.index.sqlite`, `.organizer/staging/`, `.organizer/logs/`) so agent memory, indexing, and staging remain consistent.
 - Design search and indexing features to scale to large collections (100k+ files) while keeping response times fast.
+- Always run `python -m pytest` (or the targeted test command) before completing work; if tests cannot run, capture and report the failure reason explicitly.

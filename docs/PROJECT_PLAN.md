@@ -88,9 +88,9 @@ and exposes both a CLI and menu-driven UI for search and organization flows.
 ### Milestone Progress
 - [x] **Setup & Infrastructure** – Base package structure established, configuration loader shipped, and documentation published for environment and scaffolding workflows.
 - [x] **MCP Server Foundations** – Server scaffold with router/context completed alongside JSON memory and SQLite index adapters.
-- [ ] **Filesystem Scanning & Indexing** – Build `scan_paths`, `index_paths`, and `search_files` tools on top of the new storage layer.
-- [ ] **Rule Engine and Safety Tooling** – Implement the Rule DSL and add staging/diff/apply/rollback integrations to the server.
-- [ ] **Memory, Prompts, and Polish** – Wire memory tools, agent prompts, TUI flows, and extensive safety testing.
+- [x] **Filesystem Scanning & Indexing** – Build `scan_paths`, `index_paths`, and `search_files` tools on top of the new storage layer.
+- [x] **Rule Engine and Safety Tooling** – Implement the Rule DSL and add staging/diff/apply/rollback integrations to the server.
+- [x] **Memory, Prompts, and Polish** – Wire memory tools, agent prompts, TUI flows, and extensive safety testing.
 
 ## Testing Checklist
 - Cross-device move integrity with hash verification.

@@ -12,6 +12,7 @@ DEFAULT_INDEX_FILENAME = "organizer.index.sqlite"
 DEFAULT_WORK_DIR = Path.home() / ".organizer"
 DEFAULT_STAGING_DIRNAME = "staging"
 DEFAULT_LOG_DIRNAME = "logs"
+DEFAULT_LLAMA_KEY_FILENAME = "llama.api.key"
 
 
 @dataclass(frozen=True)
@@ -23,6 +24,7 @@ class OrganizerPaths:
     index_file: Path
     staging_dir: Path
     log_dir: Path
+    llama_api_key_file: Path
 
     def iter_ensure_dirs(self) -> Iterable[Path]:
         """Yield directories that should exist for the organizer.
@@ -53,6 +55,7 @@ def load_organizer_paths(base_dir: Path | None = None) -> OrganizerPaths:
     index_file = root_dir / DEFAULT_INDEX_FILENAME
     staging_dir = root_dir / DEFAULT_STAGING_DIRNAME
     log_dir = root_dir / DEFAULT_LOG_DIRNAME
+    llama_api_key_file = root_dir / DEFAULT_LLAMA_KEY_FILENAME
 
     paths = OrganizerPaths(
         root=root_dir,
@@ -60,6 +63,7 @@ def load_organizer_paths(base_dir: Path | None = None) -> OrganizerPaths:
         index_file=index_file,
         staging_dir=staging_dir,
         log_dir=log_dir,
+        llama_api_key_file=llama_api_key_file,
     )
 
     for directory in paths.iter_ensure_dirs():

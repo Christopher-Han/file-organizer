@@ -3,6 +3,7 @@
 from .config import OrganizerPaths, load_organizer_paths
 from .models import FileMetadata, SuggestedChange
 from .rules import build_suggestions, load_rules, parse_rule, rule_matches
+from .runtime import PromptContext, build_review_prompt
 from .staging import (
     StageManifest,
     apply_manifest,
@@ -11,6 +12,7 @@ from .staging import (
     rollback_manifest,
     stage_changes,
 )
+from .llm import DEFAULT_MODEL, LlamaAPIError, LlamaClient, LlamaCredentials
 
 __all__ = [
     "OrganizerPaths",
@@ -22,9 +24,15 @@ __all__ = [
     "load_rules",
     "parse_rule",
     "rule_matches",
+    "build_review_prompt",
+    "PromptContext",
     "stage_changes",
     "load_manifest",
     "preview_diff",
     "apply_manifest",
     "rollback_manifest",
+    "DEFAULT_MODEL",
+    "LlamaAPIError",
+    "LlamaClient",
+    "LlamaCredentials",
 ]
